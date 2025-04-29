@@ -4,6 +4,7 @@
   gap: var(--spacing-4);
   padding: var(--spacing-4);
   background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
 }
 
 .tickets-form__form {
@@ -12,12 +13,19 @@
   gap: var(--spacing-2);
 }
 
+.tickets-form__total-title {
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--font-weight-light);
+  margin-bottom: var(--spacing-2);
+}
+
 .tickets-form__total {
   display: flex;
   justify-content: space-between;
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--font-weight-light);
 }
 
 .tickets-form__total > h3 {
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
 }

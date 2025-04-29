@@ -6,7 +6,7 @@
 
 .event-info__title {
   font-size: var(--font-size-xlarge);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
 }
 
 .event-info__items {
@@ -21,5 +21,5 @@
   gap: var(--spacing);
   font-size: var(--font-size-small);
   color: var(--color-secondary);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }

@@ -8,9 +8,9 @@ function App() {
   const bands = [skaBand, kpopBand, punkBand];
 
   return (
-    <div className="App">
-      <BandForm band={bands[1]} />
-    </div>
+    <main className="app">
+      <BandForm band={bands[2]} />
+    </main>
   );
 }
 

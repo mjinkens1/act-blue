@@ -13,6 +13,7 @@ code {
 }
 
 :root {
+  --primary-color: #0058d3;
   --background: #ffffff;
   --background-secondary: #f2f0f0;
   --color: #111827;
@@ -21,11 +22,14 @@ code {
   --font-size-medium: 1rem;
   --font-size-large: 1.25rem;
   --font-size-xlarge: 1.5rem;
-  --spacing: 0.5rem;
-  --spacing-2: calc(var(--spacing) * 2);
-  --spacing-4: calc(var(--spacing) * 4);
-  --spacing-6: calc(var(--spacing) * 6);
-  --spacing-8: calc(var(--spacing) * 8);
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-light: 300;
+  --spacing: 0.25rem;
+  --spacing-2: calc(var(--spacing) * 4);
+  --spacing-4: calc(var(--spacing) * 8);
+  --spacing-6: calc(var(--spacing) * 12);
+  --spacing-8: calc(var(--spacing) * 16);
   --input-height: 2.5rem;
   --border-radius: 0.25rem;
   --border-color: #6b7280;
@@ -44,10 +48,28 @@ p {
 input {
   height: var(--input-height);
   border: 1px solid var(--border-color);
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+}
+
+input[type="number"] {
+  padding-right: 0;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
   opacity: 1;
   appearance: auto;
   height: var(--input-height);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
 }

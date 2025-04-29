@@ -10,9 +10,9 @@ const formatUsd = (cents) => {
 };
 
 function Price(props) {
-  const { amount } = props;
+  const { className, amount } = props;
 
-  return <span>{formatUsd(amount)}</span>;
+  return <span className={className}>{formatUsd(amount)}</span>;
 }
 
 export default Price;

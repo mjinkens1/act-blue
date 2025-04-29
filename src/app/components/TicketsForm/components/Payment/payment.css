@@ -1,0 +1,57 @@
+.payment {
+  max-width: 30rem;
+  display: grid;
+  grid-template-areas:
+    "first-name last-name"
+    "address address"
+    "details-title details-title"
+    "card-number card-number"
+    "card-expiration card-cvv"
+    "button button";
+  gap: var(--spacing-2);
+}
+
+.payment__input--first-name {
+  grid-area: first-name;
+  min-width: 0;
+}
+
+.payment__input--last-name {
+  grid-area: last-name;
+  min-width: 0;
+}
+
+.payment__input--address {
+  grid-area: address;
+  min-width: 0;
+}
+
+.payment__details-title {
+  grid-area: details-title;
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--spacing-2);
+}
+
+.payment__input--card-number {
+  grid-area: card-number;
+  min-width: 0;
+}
+
+.payment__input--card-expiration {
+  grid-area: card-expiration;
+  min-width: 0;
+}
+
+.payment__input--card-cvv {
+  grid-area: card-cvv;
+  min-width: 0;
+}
+
+.payment__button {
+  grid-area: button;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-2);
+  cursor: pointer;
+}
