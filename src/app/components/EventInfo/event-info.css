@@ -1,0 +1,20 @@
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+.event-info__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.event-info__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+  font-size: var(--font-size-small);
+  color: var(--color-secondary);
+  font-weight: 500;
+}
