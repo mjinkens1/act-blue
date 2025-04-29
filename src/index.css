@@ -14,17 +14,21 @@ code {
 
 :root {
   --background: #ffffff;
+  --background-secondary: #f2f0f0;
   --color: #111827;
   --color-secondary: #6b7280;
   --font-size-small: 0.9rem;
   --font-size-medium: 1rem;
-  --font-size-large: 1.2rem;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 1.5rem;
   --spacing: 0.5rem;
   --spacing-2: calc(var(--spacing) * 2);
   --spacing-4: calc(var(--spacing) * 4);
   --spacing-6: calc(var(--spacing) * 6);
   --spacing-8: calc(var(--spacing) * 8);
+  --input-height: 2.5rem;
   --border-radius: 0.25rem;
+  --border-color: #6b7280;
 }
 
 h1,
@@ -35,4 +39,15 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+input {
+  height: var(--input-height);
+  border: 1px solid var(--border-color);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+  appearance: auto;
+  height: var(--input-height);
 }

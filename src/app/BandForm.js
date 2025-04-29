@@ -1,8 +1,10 @@
 import "./band-form.css";
 
-import { BandInfo, EventInfo, TicketForm } from "./components";
+import { BandInfo, EventInfo, TicketsForm } from "./components";
 
-function BandForm({ band }) {
+function BandForm(props) {
+  const { band } = props;
+
   return (
     <div className="band-form">
       <EventInfo band={band} />
@@ -10,7 +12,7 @@ function BandForm({ band }) {
       <section className="band-form__content">
         <BandInfo band={band} />
 
-        <TicketForm band={band} />
+        <TicketsForm band={band} />
       </section>
     </div>
   );

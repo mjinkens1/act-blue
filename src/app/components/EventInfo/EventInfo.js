@@ -6,7 +6,7 @@ function EventInfo(props) {
   const { band } = props;
   return (
     <section className="event-info">
-      <h1>{band.name}</h1>
+      <h1 className="event-info__title">{band.name}</h1>
 
       <div className="event-info__items">
         <div className="event-info__item">

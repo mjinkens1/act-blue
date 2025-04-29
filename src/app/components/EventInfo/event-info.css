@@ -4,6 +4,11 @@
   gap: calc(var(--spacing) * 2);
 }
 
+.event-info__title {
+  font-size: var(--font-size-xlarge);
+  font-weight: 600;
+}
+
 .event-info__items {
   display: flex;
   flex-direction: column;

@@ -7,6 +7,6 @@
 
 .band-form__content {
   display: grid;
-  grid-template-columns: 40% 60%;
-  gap: var(--spacing-8);
+  grid-template-columns: 0.8fr 1fr;
+  gap: var(--spacing-4);
 }
