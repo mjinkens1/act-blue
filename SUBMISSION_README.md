@@ -63,7 +63,7 @@ This take-home was treated as a chance to demonstrate clean component architectu
 
 ## 🔍 Testing
 
-- 100% unit + interaction coverage via Jest and RTL
+- Unit + interaction coverage via Jest and RTL
 - Each component has its own test file covering:
   - Render logic
   - Input interaction
