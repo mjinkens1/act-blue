@@ -3,7 +3,13 @@ import sanitizeHtml from "sanitize-html";
 
 import "./band-info.css";
 
-function BandInfo(props) {
+import { BandT } from "../../types";
+
+type PropsT = {
+  band: BandT;
+};
+
+function BandInfo(props: PropsT) {
   const { band } = props;
 
   const safeHTML = sanitizeHtml(band.description_blurb);

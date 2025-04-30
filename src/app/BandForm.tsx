@@ -2,7 +2,13 @@ import "./band-form.css";
 
 import { BandInfo, EventInfo, TicketsForm } from "./components";
 
-function BandForm(props) {
+import { BandT } from "./types";
+
+type PropsT = {
+  band: BandT;
+};
+
+function BandForm(props: PropsT) {
   const { band } = props;
 
   return (

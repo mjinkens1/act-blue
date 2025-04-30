@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   font-size: var(--font-size-xlarge);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-medium);
 }
 
 .tickets-form__total > h3 {

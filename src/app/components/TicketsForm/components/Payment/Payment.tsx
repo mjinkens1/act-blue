@@ -1,11 +1,20 @@
 import { InputMask } from "@react-input/mask";
+import { CreditCard } from "lucide-react";
 
 import "./payment.css";
 
-function Payment(props) {
+import { PaymentDetailsT } from "../../../../types";
+
+type PropsT = {
+  isFormValid: boolean;
+  payment: PaymentDetailsT;
+  onChange: (name: string, value: string) => void;
+};
+
+function Payment(props: PropsT) {
   const { isFormValid, payment, onChange } = props;
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     onChange(name, value);
   };
@@ -42,17 +51,21 @@ function Payment(props) {
 
       <div className="payment__details-title">Payment Details</div>
 
-      <InputMask
-        aria-label="Card Number"
-        type="tel"
-        name="cardNumber"
-        className="payment__input--card-number"
-        placeholder="0000 0000 0000 0000"
-        mask="9999 9999 9999 9999"
-        replacement={{ 9: /\d/ }}
-        value={payment.cardNumber}
-        onChange={handleChange}
-      />
+      <div className="payment__card-number-container">
+        <InputMask
+          aria-label="Card Number"
+          type="tel"
+          name="cardNumber"
+          className="payment__input--card-number"
+          placeholder="0000 0000 0000 0000"
+          mask="9999 9999 9999 9999"
+          replacement={{ 9: /\d/ }}
+          value={payment.cardNumber}
+          onChange={handleChange}
+        />
+
+        <CreditCard className="payment__card-number-container-icon" />
+      </div>
 
       <InputMask
         aria-label="Card Expiration"
@@ -71,7 +84,7 @@ function Payment(props) {
         type="tel"
         name="cardCVV"
         className="payment__input--card-cvv"
-        placeholder="Card CVV"
+        placeholder="CVV"
         mask="999"
         replacement={{ 9: /\d/ }}
         value={payment.cardCVV}

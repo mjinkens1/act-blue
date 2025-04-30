@@ -1,4 +1,4 @@
-const formatUsd = (cents) => {
+const formatUsd = (cents: number) => {
   const dollars = cents / 100;
 
   return new Intl.NumberFormat("en-US", {
@@ -9,7 +9,12 @@ const formatUsd = (cents) => {
   }).format(dollars);
 };
 
-function Price(props) {
+type PropsT = {
+  amount: number;
+  className?: string;
+};
+
+function Price(props: PropsT) {
   const { className, amount } = props;
 
   return <span className={className}>{formatUsd(amount)}</span>;

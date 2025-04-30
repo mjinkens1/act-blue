@@ -1,12 +1,19 @@
 import "./ticket.css";
 
-import { Price } from "../";
+import { Price } from "..";
 
-function Ticket(props) {
+import { TicketWithQuantityT } from "../../../../types";
+
+type PropsT = {
+  ticket: TicketWithQuantityT;
+  onQuantityChange: (ticketType: string, quantity: number) => void;
+};
+
+function Ticket(props: PropsT) {
   const { ticket, onQuantityChange } = props;
 
-  const handleQuantityChange = (event) => {
-    onQuantityChange(ticket.type, event.target.value);
+  const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onQuantityChange(ticket.type, parseInt(event.target.value));
   };
 
   return (

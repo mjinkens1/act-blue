@@ -2,7 +2,13 @@ import { CalendarDays, MapPin } from "lucide-react";
 
 import "./event-info.css";
 
-function EventInfo(props) {
+import { BandT } from "../../types";
+
+type PropsT = {
+  band: BandT;
+};
+
+function EventInfo(props: PropsT) {
   const { band } = props;
 
   const formattedDate = new Date(band.date).toLocaleDateString("en-US", {

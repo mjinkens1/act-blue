@@ -4,14 +4,20 @@ import "./tickets-form.css";
 
 import { Price, Tickets, Payment } from "./components";
 
-const stripCardValue = (value) => {
+import { BandT, TicketWithQuantityT } from "../../types";
+
+const stripCardValue = (value: string) => {
   return value.replace(/\s/g, "");
 };
 
-function TicketsForm(props) {
+type PropsT = {
+  band: BandT;
+};
+
+function TicketsForm(props: PropsT) {
   const { band } = props;
 
-  const [tickets, setTickets] = useState(
+  const [tickets, setTickets] = useState<TicketWithQuantityT[]>(
     band.ticketTypes.map((ticket) => ({ ...ticket, quantity: 0 }))
   );
 
@@ -44,7 +50,7 @@ function TicketsForm(props) {
 
   const isFormValid = hasSelectedTickets && hasValidPayment;
 
-  const handleQuantityChange = (ticketType, quantity) => {
+  const handleQuantityChange = (ticketType: string, quantity: number) => {
     setTickets((prevTickets) =>
       prevTickets.map((ticket) =>
         ticket.type === ticketType ? { ...ticket, quantity } : ticket
@@ -52,7 +58,7 @@ function TicketsForm(props) {
     );
   };
 
-  const handlePaymentChange = (field, value) => {
+  const handlePaymentChange = (field: string, value: string) => {
     setPayment((prevPayment) => ({ ...prevPayment, [field]: value }));
   };
 
@@ -60,7 +66,7 @@ function TicketsForm(props) {
   // would not be handled directly by the application. Instead, a secure third-party provider (such as Stripe)
   // would be used to collect and tokenize payment data through embedded secure fields (e.g., Stripe Elements),
   // ensuring PCI compliance and end-to-end encryption."
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     console.warn(
@@ -90,7 +96,6 @@ function TicketsForm(props) {
         </div>
 
         <Payment
-          tickets={tickets}
           isFormValid={isFormValid}
           payment={payment}
           onChange={handlePaymentChange}

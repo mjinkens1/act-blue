@@ -5,7 +5,7 @@
 }
 
 .event-info__title {
-  font-size: var(--font-size-xlarge);
+  font-size: var(--font-size-xxlarge);
   font-weight: var(--font-weight-bold);
 }
 
@@ -17,7 +17,6 @@
 
 .event-info__item {
   display: flex;
-  align-items: center;
   gap: var(--spacing);
   font-size: var(--font-size-small);
   color: var(--color-secondary);

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <main className="app">
-      <BandForm band={bands[2]} />
+      <BandForm band={bands[0]} />
     </main>
   );
 }

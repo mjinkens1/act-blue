@@ -22,6 +22,7 @@ code {
   --font-size-medium: 1rem;
   --font-size-large: 1.25rem;
   --font-size-xlarge: 1.5rem;
+  --font-size-xxlarge: 1.75rem;
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-light: 300;
@@ -45,6 +46,14 @@ p {
   margin: 0;
 }
 
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--color-secondary);
+}
+
 input {
   height: var(--input-height);
   border: 1px solid var(--border-color);
@@ -62,6 +71,11 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 1;
   appearance: auto;
   height: var(--input-height);
+}
+
+button {
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
 }
 
 button:disabled {

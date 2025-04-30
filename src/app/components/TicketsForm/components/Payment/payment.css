@@ -32,8 +32,21 @@
   margin-top: var(--spacing-2);
 }
 
-.payment__input--card-number {
+.payment__card-number-container {
+  position: relative;
   grid-area: card-number;
+  display: flex;
+  align-items: center;
+}
+
+.payment__card-number-container-icon {
+  position: absolute;
+  right: var(--spacing-2);
+  color: var(--color-secondary);
+}
+
+.payment__input--card-number {
+  flex: 1;
   min-width: 0;
 }
 
