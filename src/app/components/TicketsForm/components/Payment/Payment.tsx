@@ -56,12 +56,12 @@ function Payment(props: PropsT) {
       <div className="payment__card-number-container">
         <InputMask
           aria-label="Card Number"
-          type="tel"
+          type="text"
           name="cardNumber"
           className="payment__input--card-number"
           placeholder="0000 0000 0000 0000"
-          mask="9999 9999 9999 9999"
-          replacement={{ 9: /\d/ }}
+          mask="____ ____ ____ ____"
+          replacement={{ _: /\d/ }}
           value={payment.cardNumber}
           onChange={handleChange}
         />
@@ -75,8 +75,8 @@ function Payment(props: PropsT) {
         name="cardExpiration"
         className="payment__input--card-expiration"
         placeholder="MM / YY"
-        mask="99 / 99"
-        replacement={{ 9: /\d/ }}
+        mask="__ / __"
+        replacement={{ _: /\d/ }}
         value={payment.cardExpiration}
         onChange={handleChange}
       />
@@ -87,8 +87,8 @@ function Payment(props: PropsT) {
         name="cardCVV"
         className="payment__input--card-cvv"
         placeholder="CVV"
-        mask="999"
-        replacement={{ 9: /\d/ }}
+        mask="___"
+        replacement={{ _: /\d/ }}
         value={payment.cardCVV}
         onChange={handleChange}
       />
