@@ -35,20 +35,18 @@ The UI was styled using scoped CSS for simplicity and visual clarity, avoiding o
 ## Testing
 
 - Unit + interaction coverage via Jest and RTL
-- Each component has its own test file covering:
-  - Render logic
-  - Input interaction
-  - Prop behavior
-  - Callback invocation
 
 ```bash
 npm run test:coverage
 ```
 
-🧠 My Approach
+### My Approach
+
 I reviewed the JSON schema and wireframe, then scoped a structure that focused on correctness, clarity, and accessibility. I built the core functionality first, then layered in tests, styles, and minor validation.
 
-📁 File Structure
+#File Structure
+
+```
 src/
 ├── App.tsx
 ├── app/
@@ -59,8 +57,9 @@ src/
 │ └── TicketsForm/
 ├── band-json/ # Provided concert data
 └── types.ts # Shared type definitions
+```
 
-🚀 Getting Started
+### Getting Started
 
 ```bash
 npm install
