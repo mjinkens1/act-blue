@@ -86,7 +86,11 @@ function TicketsForm(props: PropsT) {
     <section className="tickets-form">
       <h2 className="tickets-form__title">Select Tickets</h2>
 
-      <form className="tickets-form__form" onSubmit={handleSubmit}>
+      <form
+        data-testid="tickets-form"
+        className="tickets-form__form"
+        onSubmit={handleSubmit}
+      >
         <Tickets tickets={tickets} onQuantityChange={handleQuantityChange} />
 
         <div className="tickets-form__total">

@@ -20,7 +20,9 @@ function Payment(props: PropsT) {
   };
 
   return (
-    <div className="payment">
+    <fieldset className="payment">
+      <legend className="sr-only">Payment Details</legend>
+
       <input
         aria-label="First Name"
         type="text"
@@ -94,7 +96,7 @@ function Payment(props: PropsT) {
       <button className="payment__button" disabled={!isFormValid}>
         Get Tickets
       </button>
-    </div>
+    </fieldset>
   );
 }
 

@@ -55,6 +55,13 @@ p {
   color: var(--color-secondary);
 }
 
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-inline-size: unset; /* Firefox default override */
+}
+
 input {
   height: var(--input-height);
   border: 1px solid var(--border-color);
@@ -90,4 +97,16 @@ button:disabled {
 .app {
   display: flex;
   justify-content: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

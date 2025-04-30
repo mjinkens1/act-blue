@@ -6,8 +6,8 @@ export type TicketT = {
 };
 
 export type BandT = {
-  name: string;
   id: string;
+  name: string;
   date: number; // Unix timestamp (ms)
   location: string;
   description_blurb: string; // sanitized/rendered as HTML
